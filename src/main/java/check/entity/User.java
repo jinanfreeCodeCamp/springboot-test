@@ -3,14 +3,14 @@ package check.entity;
 /*
 */
 public class User{
-    private String mame;
+    private String name;
     private String phone;
 
     /**
      * @return the mame
      */
-    public String getMame() {
-        return mame;
+    public String getName() {
+        return name;
     }
 
     /**
@@ -30,7 +30,7 @@ public class User{
     /**
      * @param mame the mame to set
      */
-    public void setMame(String mame) {
-        this.mame = mame;
+    public void setName(String name) {
+        this.name = name;
     }
 }
