@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import check.entity.User;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -26,12 +27,12 @@ public class UserController{
     }
 
     @RequestMapping(value="addUser", method=RequestMethod.POST)
-    public String addUser(User user){
+    public String addUser(@RequestBody User user){
         return "add User success";
     }
 
     @RequestMapping(value="updateUser", method=RequestMethod.PUT)
-    public String updateUser(User user){
+    public String updateUser(@RequestBody User user){
         return "update User success";
     }
 }
