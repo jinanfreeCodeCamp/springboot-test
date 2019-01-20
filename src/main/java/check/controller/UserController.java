@@ -17,7 +17,7 @@ public class UserController{
 
     @Autowired
     private UserService userService;
-    @RequestMapping("/getUser")
+    @RequestMapping(value="/getUser",method=RequestMethod.GET)
     public User getUser(){
         User user = userService.getUser();
         user.setName("FCC");
