@@ -1,4 +1,4 @@
-package check;
+package check.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
