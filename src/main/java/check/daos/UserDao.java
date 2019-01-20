@@ -3,8 +3,8 @@ package check.daos;
 import check.entity.User;
 
 public interface UserDao {
-    User getUser();
-    int addUser(User user);
-    int updateUser(User user);
-    int deleteUser(String id);
+    User get();
+    int insert(User user);
+    int update(User user);
+    int delete(String id);
 }
