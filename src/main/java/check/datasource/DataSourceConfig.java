@@ -18,34 +18,34 @@ import javax.sql.DataSource;
 /**.
  */
 @Configuration
-@MapperScan(basePackages = "check.daos", sqlSessionTemplateRef  = "test1SqlSessionTemplate")
+@MapperScan(basePackages = "check.daos", sqlSessionTemplateRef  = "SqlSessionTemplate")
 public class DataSourceConfig {
 
-    @Bean(name = "test1DataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.test1")
+    @Bean(name = "DataSource")
+    @ConfigurationProperties(prefix = "spring.datasource")
     @Primary
     public DataSource testDataSource() {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name = "test1SqlSessionFactory")
+    @Bean(name = "SqlSessionFactory")
     @Primary
-    public SqlSessionFactory testSqlSessionFactory(@Qualifier("test1DataSource") DataSource dataSource) throws Exception {
+    public SqlSessionFactory testSqlSessionFactory(@Qualifier("DataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mybatis/mapper/test1/*.xml"));
+        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mybatis/mapper//*.xml"));
         return bean.getObject();
     }
 
-    @Bean(name = "test1TransactionManager")
+    @Bean(name = "TransactionManager")
     @Primary
-    public DataSourceTransactionManager testTransactionManager(@Qualifier("test1DataSource") DataSource dataSource) {
+    public DataSourceTransactionManager testTransactionManager(@Qualifier("DataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
-    @Bean(name = "test1SqlSessionTemplate")
+    @Bean(name = "SqlSessionTemplate")
     @Primary
-    public SqlSessionTemplate testSqlSessionTemplate(@Qualifier("test1SqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
+    public SqlSessionTemplate testSqlSessionTemplate(@Qualifier("SqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 
