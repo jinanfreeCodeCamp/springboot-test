@@ -3,6 +3,7 @@ package check.services.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import check.daos.UserDao;
 import check.entity.User;
 import check.services.CreditSystemService;
 import check.services.UserService;
@@ -11,7 +12,7 @@ import check.services.UserService;
 public class UserServiceImpl implements UserService {
 
     @Autowired 
-    CreditSystemService creditSystemService ; 
+    CreditSystemService creditSystemService; 
 
     @Override
     public User getUser() {

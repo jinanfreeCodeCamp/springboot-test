@@ -6,5 +6,7 @@
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="phone" property="phone" jdbcType="VARCHAR" />
     </resultMap>
-
+    <select id="get" resultType="check.entity.User">
+        select Name From User
+    </select>
 </mapper>
