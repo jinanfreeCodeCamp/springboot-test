@@ -13,10 +13,11 @@ public class UserServiceImpl implements UserService {
 
     @Autowired 
     CreditSystemService creditSystemService; 
-
+    @Autowired
+    private UserDao userDao;
     @Override
     public User getUser() {
-        return new User();
+        return userDao.get();
     }
 
     @Override
