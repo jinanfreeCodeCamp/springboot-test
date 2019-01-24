@@ -5,17 +5,33 @@ package check.entity;
 public class User{
     private String name;
     private String phone;
+    private String role;
 
-    public User(){
-        
+    public User() {
+
     }
+
+    /**
+     * @return the role
+     */
+    public String getRole() {
+        return role;
+    }
+
+    /**
+     * @param role the role to set
+     */
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public User(String name, String phone) {
         this.name = name;
         this.phone = phone;
 	}
 
 	/**
-     * @return the mame
+     * @return the name
      */
     public String getName() {
         return name;
@@ -36,7 +52,7 @@ public class User{
     }
 
     /**
-     * @param mame the mame to set
+     * @param mame the name to set
      */
     public void setName(String name) {
         this.name = name;
