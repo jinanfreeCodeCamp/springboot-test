@@ -14,6 +14,11 @@
     </parent>
 
     <dependencies>
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <!-- 使用HikariCP数据库连接池 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
