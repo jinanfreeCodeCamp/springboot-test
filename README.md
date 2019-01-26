@@ -14,6 +14,7 @@ springboot-test is base on springboot.
 - [ ] redis session
 - [ ] role
 - [ ] greenkeeper
+- [ ] mongodb
 
 ## The MIT License (MIT)
 
