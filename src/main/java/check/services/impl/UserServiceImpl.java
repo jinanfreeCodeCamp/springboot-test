@@ -8,11 +8,16 @@ import check.entity.User;
 import check.services.CreditSystemService;
 import check.services.UserService;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired 
-    CreditSystemService creditSystemService; 
+    @Autowired
+    CreditSystemService creditSystemService;
+
+
+
     @Autowired
     private UserDao userDao;
     @Override
@@ -37,7 +42,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int getCredit(int userid) {
-        return creditSystemService.getUserCredit(userid) ; 
+        return creditSystemService.getUserCredit(userid) ;
     }
 
+    @Override
+    public List<User> getPageUser() {
+        return  userDao.getPageUser();
+    }
 }

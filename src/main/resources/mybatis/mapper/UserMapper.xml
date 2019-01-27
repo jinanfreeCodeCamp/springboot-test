@@ -9,4 +9,7 @@
     <select id="get" resultType="check.entity.User">
         select Name From User
     </select>
+    <select id="getPageUser" resultType="check.entity.User">
+      select id,name,phone From User
+    </select>
 </mapper>

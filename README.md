@@ -15,6 +15,7 @@ springboot-test is base on springboot.
 - [ ] role
 - [ ] greenkeeper
 - [ ] mongodb
+- [x] pageHelper
 
 ## The MIT License (MIT)
 
