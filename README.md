@@ -2,6 +2,7 @@
 
 springboot-test is base on springboot.
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![license][license-image]][license-url]
 
 ## Project module
