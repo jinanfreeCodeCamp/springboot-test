@@ -46,18 +46,10 @@ public class UserController {
 
     @RequestMapping(value = "getPageUser", method = RequestMethod.POST)
     public List<User> getPageUser(@RequestParam("page") Integer page, @RequestParam("rows") Integer rows) {
-        //为了程序的严谨性，判断非空：
-        if (page == null) {
-            page = 1;   //设置默认当前页
-        }
-        if (page <= 0) {
-            page = 1;
-        }
-        if (rows == null) {
-            rows = 10;    //设置默认每页显示的条数
-        }
-        //1、设置分页信息，包括当前页数和每页显示的总计数
-        PageHelper.startPage(page, rows);
+        User user = new User();
+        user.setPage(page);
+        user.setRows(rows);
+        PageHelper.startPage(user.getPage(), user.getRows());
         List<User> list = userService.getPageUser();
         return list;
     }
