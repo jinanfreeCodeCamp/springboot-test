@@ -17,6 +17,9 @@ springboot-test is base on springboot.
 - [ ] greenkeeper
 - [ ] mongodb
 - [x] pageHelper
+- [ ] cors
+- [ ] fileupload
+- [ ] login
 
 ## The MIT License (MIT)
 
