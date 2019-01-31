@@ -20,6 +20,8 @@ springboot-test is base on springboot.
 - [ ] cors
 - [ ] fileupload
 - [ ] login
+- [ ] spring cloud
+- [x] docker
 
 ## The MIT License (MIT)
 
