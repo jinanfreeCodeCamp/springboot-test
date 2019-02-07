@@ -22,6 +22,7 @@ springboot-test is base on springboot.
 - [ ] login
 - [ ] spring cloud
 - [x] docker
+- [x] restfulapi
 
 ## The MIT License (MIT)
 
